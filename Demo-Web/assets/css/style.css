@@ -1,0 +1,451 @@
+:root {
+    --yellow: #f6d365;
+    --black: #333333;
+    --white: #ffffff;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.hamburger {
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+
+}
+
+
+/* Header Section */
+
+header {
+    height: 800px;
+    background: url("../img/cars.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    nav {
+
+        margin: 0 2rem;
+        .nav-wrapper {
+            position: relative;
+            height: 200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+
+            }
+
+            .menu {
+                display: flex;
+                list-style: none;
+
+                li {
+                    margin-left: 50px;
+
+                    a {
+                        color: var(--white);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .hamburger{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+        padding: 3rem 0 ;
+
+        nav {
+            .nav-wrapper{
+                flex-direction: column;
+                align-items: start;
+                margin: 3rem 0;
+                height: auto;
+
+
+                .menu.show {
+                    display: flex;
+                }
+
+                .menu {
+                    display: none;
+                    flex-direction: column;
+
+                    li {
+                        margin-left: 0;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .discount-title{
+        .discount-title-wrapper {
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            .discount-title-box {
+
+                width: 880px;
+                margin: 10px;
+
+                h1 {
+                    /* เอาไว้ทำค่า responsive ให้กับ font */
+                    font-size: clamp(2rem, 10vw, 6.875rem);
+                    text-transform: uppercase;
+                }
+
+                p{
+                    font-size: clamp(1rem, 10vw, 1.875rem);
+
+                }
+
+                .discount-btn{
+                    background-color: var(--yellow);
+                    color: var(--black);
+                    max-width: 320px;
+                    width: 100%;
+                    height: 65px;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    margin-top: 60px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Popular Menu Section */
+
+.popular-menu{
+    background: url("../img/抽象的なテクスチャ背景\ _\ 無料の写真.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    color: var(--white);
+    overflow: hidden;
+
+    .popular-menu-title{
+        margin: 3rem 0;
+        text-align: center;
+
+        h2{
+             font-size: clamp(2rem, 10vw, 3.875rem);
+             text-transform: uppercase;
+        }
+
+        p{
+             font-size: clamp(1rem, 10vw, 1.625rem);
+        }
+    }
+
+    .popular-menu-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+        gap: 3rem;
+
+        .popular-menu-items{
+            text-align: center;
+            img{
+                width: 100%;
+            
+            }
+
+            h3{
+                font-size: clamp(1rem, 10vw, 2rem);
+                margin: 1rem 0;
+            }
+
+            p{
+                   font-size: clamp(1rem, 10vw, 1.25rem);
+            }
+        }
+    }
+
+    @media screen and (max-width: 780px) {
+        height: auto;
+        padding: 3rem 0;
+    }
+}
+
+/* Cars section */
+
+.cars {
+    background: url("../img/抽象的なテクスチャ背景\ _\ 無料の写真.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+
+    .cars-warpper {
+        display: flex;
+        align-items: center;
+        height: 800px;
+
+        .cars-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .cars-img{
+                img{
+                    width: 100%;
+                }
+            }
+
+            .cars-info{
+                max-width: 580px;
+                width: 100%;
+                color: var(--white);
+                padding: 1rem;
+
+                h2{
+                    font-size: clamp(2rem, 10vw, 3.75rem);
+                    text-transform: uppercase;
+                }
+
+                p{
+                    font-size: clamp(2rem, 10vw, 1.5rem);
+                    margin-top: 2rem;
+
+                }
+
+                .cars-btn{
+                    background-color: var(--yellow);
+                    color: var(--black);
+                    max-width: 320px;
+                    width: 100%;
+                    height: 65px;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    margin-top: 60px;
+
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+
+        .cars-warpper{
+            height: auto;
+
+            .cars-box{
+                flex-direction: column;
+                padding: 3rem 0;
+            }
+        }
+    }
+}
+
+/* Sport Section */
+
+.sport{
+    background: url("../img/抽象的なテクスチャ背景\ _\ 無料の写真.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    color: var(--white);
+
+    .sport-wrapper{
+        display: flex;
+        align-items: center;
+        height: 800px;
+
+        .sport-box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            .sport-info{
+                max-width: 580px;
+                width: 100%;
+                padding: 1rem;
+
+                h3{
+                    font-size: clamp(2rem, 10vw, 3.75rem);
+                    text-transform: uppercase;
+                }
+
+                p{
+                    font-size: clamp(2rem, 10vw, 1.5rem);
+                    margin-top: 2rem;
+                }
+
+                .sport-btn{
+                    background-color: var(--yellow);
+                    color: var(--black);
+                    max-width: 320px;
+                    width: 100%;
+                    height: 65px;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    margin-top: 60px;
+                }
+            }
+
+            .sport-img{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        height: auto;
+
+        .sport-wrapper{
+            height: auto;
+
+            .sport-box{
+                flex-direction: column;
+                padding: 3rem;
+            }
+        }
+    }
+}
+
+/* Boss Section */
+
+.boss{
+    height: 800px;
+    background: url("../img/ดาวน์โหลด\ \(5\).jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .boss-warpper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        text-align: center;
+        color: var(--white);
+
+        .boss-info{
+
+            img{
+                max-width: 248px;
+                width: 100%;
+            }
+
+            p{
+                font-size: clamp(1rem, 10vw, 2.3rem);
+                margin-top: 3rem;
+            }
+
+            h3{
+                font-size: clamp(1rem, 10vw, 2.8rem);
+
+            }
+        }
+    }
+}
+
+/* Footer */
+
+footer{
+    height: 800px;
+    background-color: var(--black);
+    .footer-warpper{
+        height: 800px;
+        display: flex;
+        align-items: center;
+
+        .footer-grid{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            color: var(--white);
+
+            .footer-grid-items{
+                margin: 1rem;
+
+                h4{
+                    font-size: clamp(1rem, 10vw, 2rem);
+                    margin-bottom: 1rem;
+                    font-weight: 300;
+                    
+                }
+
+                a{
+                    color: var(--white);
+                }
+
+                ul{
+                    list-style: none;
+
+                    li{
+                        margin-top: 1rem;
+
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                &:nth-child(1){
+                    ul {
+                        display: flex;
+
+                        li{
+                            margin-top: 1rem;
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: auto;
+        padding: 3rem 0;
+        
+        .footer-warpper{
+            height: auto;
+        }
+    }
+}
