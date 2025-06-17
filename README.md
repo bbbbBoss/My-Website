@@ -1,4 +1,4 @@
 # Test web creation
-<P>Hello, my name is Saharat Hipngoen My Nickname is Boss Graduated from Kasetsart University, Sriracha Campus, majoring in Computer Science. This is a website that was created to study HTML and CSS.</P>
+<P>Hello, my name is Saharat Hipngen, nickname Boss. I graduated from Kasetsart University, Sriracha Campus, majoring in Computer Science. This is a website that shows product details to help customers choose which products they want and to help me learn about HTML and CSS.</P>
 
 ![image alt](https://github.com/bbbbBoss/Test/blob/main/Screenshot%202025-06-17%20220946.png?raw=true)
